@@ -1,0 +1,1 @@
+export const PASSPORT_AUTH_TOKEN = 'authToken';
