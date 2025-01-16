@@ -16,4 +16,16 @@ export class UtilsService {
         );
     }
 
+    generateUniqueOTP(length = 6): number {
+        const digits = '0123456789';
+        let otp = '';
+        while (otp.length < length) {
+          const randomDigit = digits[Math.floor(Math.random() * digits.length)];
+          if (!otp.includes(randomDigit)) {
+            otp += randomDigit;
+          }
+        }
+        return parseInt(otp);
+      }
+
 }
